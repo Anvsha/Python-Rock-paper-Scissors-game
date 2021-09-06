@@ -1,0 +1,47 @@
+rock = '''
+    ___________
+---'   ________)__
+      (___________)
+      (___________)
+      (___________)
+---.__(__________)
+'''
+
+paper = '''
+    _______
+---'   ____)__________
+          ____________)___
+          ________________)
+         ______________)
+---._______________)
+'''
+
+scissors = '''
+      _______
+-----(   ____)_______
+          ___________)__
+       _________________)
+      (_________)
+-----(_________)
+'''
+Image = [rock, paper, scissors]
+import random 
+user_choice= int(input("What Do You Want To Choose?: for rock -0, for paper-1, for scissor -2 \n"))
+print("Your Choice:")
+print(Image[user_choice])
+computer_choice = random.randint(0,2)
+print("Computer's Choice \n")
+print(Image[computer_choice])
+
+if user_choice > 2:
+  print("You Have Enter An Invalid Input ") 
+elif user_choice==0 and computer_choice==2:
+  print("You Win")
+elif user_choice==computer_choice:  
+   print("You match Is Draw")
+elif user_choice > computer_choice:
+   print("You Win")
+else:
+ print("You Loose")
+
+
