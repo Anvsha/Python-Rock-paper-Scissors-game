@@ -18,15 +18,15 @@ paper = '''
 
 scissors = '''
       _______
------(   ____)_______
-          ___________)__
-       _________________)
+-----(   ____)________
+          ____________)__
+       __________________)
       (_________)
 -----(_________)
 '''
 Image = [rock, paper, scissors]
 import random 
-user_choice= int(input("What Do You Want To Choose?: for rock -0, for paper-1, for scissor -2 \n"))
+user_choice= int(input("What Do You Want To Choose?: 0 for rock , 1 for paper, 2 for scissor \n"))
 print("Your Choice:")
 print(Image[user_choice])
 computer_choice = random.randint(0,2)
@@ -38,9 +38,13 @@ if user_choice > 2:
 elif user_choice==0 and computer_choice==2:
   print("You Win")
 elif user_choice==computer_choice:  
-   print("You match Is Draw")
+   print("You Match Is Draw")
+elif user_choice==2 and computer_choice==0:
+  print("You Loose")
 elif user_choice > computer_choice:
    print("You Win")
+elif user_choice < computer_choice:
+   print("You Loose")   
 else:
  print("You Loose")
 
